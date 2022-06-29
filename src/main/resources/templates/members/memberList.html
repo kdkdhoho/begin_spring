@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>이름</th>
+        <th>성별</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="member : ${members}"> <!-- thymeleaf문법인 each(for-each)를 사용해서 List<Member> members에 하나씩 접근 -->
+        <td th:text="${member.id}"></td>
+        <td th:text="${member.name}"></td>
+        <td th:text="${member.sex}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
